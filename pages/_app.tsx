@@ -1,8 +1,19 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import React from "react";
+import App from "next/app";
+import {wrapper} from '../src/store';
+import {AppContext} from "next/dist/pages/_app";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+class MyApp extends App {
+
+  static async getInitialProps({Component, ctx}: AppContext) {
+    const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
+    return {pageProps};
+  }
+
+  render() {
+    const {Component, pageProps} = this.props;
+    return <React.StrictMode> <Component {...pageProps} /> </React.StrictMode>
+  }
 }
 
-export default MyApp
+export default wrapper.withRedux(MyApp);
