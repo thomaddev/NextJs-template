@@ -4,12 +4,14 @@ import {wrapper} from '../src/store';
 import {AppContext} from "next/dist/pages/_app";
 import Layout from "../src/components/layout/layout";
 import '../styles/globals.scss'
+import {appWithTranslation} from 'next-i18next'
 
 class MyApp extends App {
-
   static async getInitialProps({Component, ctx}: AppContext) {
     const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
-    return {pageProps};
+    return {
+      pageProps
+    };
   }
 
   render() {
@@ -22,4 +24,4 @@ class MyApp extends App {
   }
 }
 
-export default wrapper.withRedux(MyApp);
+export default wrapper.withRedux(appWithTranslation(MyApp));
