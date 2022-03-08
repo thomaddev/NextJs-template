@@ -2,6 +2,8 @@ import React from "react";
 import App from "next/app";
 import {wrapper} from '../src/store';
 import {AppContext} from "next/dist/pages/_app";
+import Layout from "../src/components/layout/layout";
+import './../styles/globals.css'
 
 class MyApp extends App {
 
@@ -12,7 +14,11 @@ class MyApp extends App {
 
   render() {
     const {Component, pageProps} = this.props;
-    return <React.StrictMode> <Component {...pageProps} /> </React.StrictMode>
+    return <React.StrictMode>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </React.StrictMode>
   }
 }
 
