@@ -1,11 +1,19 @@
-export const actionTypes = {
-  FETCH_PROJECTS: 'FETCH_PROJECTS',
-  FETCH_PROJECTS_SUCCESS: 'FETCH_PROJECTS_SUCCESS',
-  FETCH_PROJECTS_ERROR: 'FETCH_PROJECTS_ERROR',
-  FETCH_PROJECTS_DETAILS: 'FETCH_PROJECTS_DETAILS',
-  FETCH_PROJECTS_DETAILS_SUCCESS: 'FETCH_PROJECTS_DETAILS_SUCCESS',
-  FETCH_PROJECTS_DETAILS_ERROR: 'FETCH_PROJECTS_DETAILS_ERROR',
-}
+import {actionTypes} from "../actionType";
+
+export const increaseCount = (count: number) => ({
+  type: actionTypes.INCREASE_COUNT,
+  payload: count
+})
+
+export const decreaseCount = (count: number) => ({
+  type: actionTypes.DECREASE_COUNT,
+  payload: count
+})
+
+export const resetCount = (count: number) => ({
+  type: actionTypes.RESET_COUNT,
+  payload: count
+})
 
 export const fetchProjects = () => ({
   type: actionTypes.FETCH_PROJECTS

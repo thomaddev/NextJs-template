@@ -1,10 +1,21 @@
 import {put, call, takeEvery, all} from 'redux-saga/effects';
-import {actionTypes} from "../actions";
 
 import {
   fetchProjectsError,
   fetchProjectDetailsError
 } from '../actions';
+import {actionTypes} from "../actionType";
+
+
+function* increaseCount() {
+  try {
+    console.log('increaseCount')
+    // const res = yield call(apiHelper.fetchProjects, 'facebook')
+    // yield put(fetchProjectsSuccess(res.data))
+  } catch (error) {
+    yield put(fetchProjectsError(error))
+  }
+}
 
 function* fetchProjects() {
   try {
@@ -31,6 +42,9 @@ function* fetchProjectDetails() {
 
 export default function* projectsSaga() {
   yield all([
+    takeEvery(actionTypes.INCREASE_COUNT, increaseCount),
+    takeEvery(actionTypes.DECREASE_COUNT, increaseCount),
+    takeEvery(actionTypes.RESET_COUNT, increaseCount),
     takeEvery(actionTypes.FETCH_PROJECTS, fetchProjects),
     // takeEvery(FETCH_PROJECTS_DETAILS, fetchProjectDetails)
   ])
