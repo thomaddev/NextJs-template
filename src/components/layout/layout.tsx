@@ -1,7 +1,10 @@
 import React from "react";
 import Header from './../header'
 
-export default function Layout({children}) {
+
+type MyComponentProps = React.PropsWithChildren<{}>;
+
+export default function Layout({children}: MyComponentProps) {
   return (
     <>
       <Header/>

@@ -3,7 +3,7 @@ import App from "next/app";
 import {wrapper} from '../src/store';
 import {AppContext} from "next/dist/pages/_app";
 import Layout from "../src/components/layout/layout";
-import './../styles/globals.css'
+import '../styles/globals.scss'
 
 class MyApp extends App {
 

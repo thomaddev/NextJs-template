@@ -8,10 +8,9 @@ export default function Header() {
       <Image
         src={Logo}
         alt="Logo DMS"
-        width={100}
-        height={100}
+        width={90}
+        height={90}
         // layout="fill"
-
         // blurDataURL="data:..." automatically provided
         // placeholder="blur" // Optional blur-up while loading
       />
