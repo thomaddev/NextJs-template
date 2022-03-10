@@ -1,10 +1,9 @@
 import {put, call, takeEvery, all} from 'redux-saga/effects';
-
 import {
   fetchProjectsError,
   fetchProjectDetailsError
-} from '../actions';
-import {actionTypes} from "../actionType";
+} from '@redux/actions';
+import {actionTypes} from "@redux/actionType";
 
 
 function* increaseCount() {

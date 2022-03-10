@@ -1,4 +1,4 @@
-import {actionTypes} from "../actionType";
+import {actionTypes} from "@redux/actionType";
 
 export const increaseCount = (count: number) => ({
   type: actionTypes.INCREASE_COUNT,

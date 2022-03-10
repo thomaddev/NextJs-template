@@ -1,6 +1,5 @@
 import React from "react";
-// import Header from './../header'
-import Header from './../header'
+import Header from '@components/header'
 
 
 type MyComponentProps = React.PropsWithChildren<{}>;

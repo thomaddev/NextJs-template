@@ -1,5 +1,5 @@
 import {HYDRATE} from "next-redux-wrapper";
-import {actionTypes} from "../actionType";
+import {actionTypes} from "@redux/actionType";
 
 const initialState = {
   count: 0,

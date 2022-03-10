@@ -1,7 +1,7 @@
 import {Component} from "react";
 import axios from 'axios';
 import styled from 'styled-components';
-import variables from '../styles/variables.module.scss'
+import variables from '@styles/variables.module.scss'
 
 const SpeechBanner = styled.p`
  font-size: 40px;

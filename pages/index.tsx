@@ -2,7 +2,7 @@ import React, {Fragment} from "react";
 import Head from "next/head";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from 'next-i18next';
-import {increaseCount} from "../src/actions";
+import {increaseCount} from "@redux/actions";
 import {connect, useDispatch} from "react-redux";
 
 export async function getStaticProps({locale}: any) {

@@ -1,9 +1,9 @@
 import React from "react";
 import App from "next/app";
-import {wrapper} from '../src/store';
+import {wrapper} from '@redux/store';
 import {AppContext} from "next/dist/pages/_app";
-import Layout from "../src/components/layout/layout";
-import '../styles/globals.scss'
+import Layout from "@components/layout/layout";
+import '@styles/globals.scss'
 import {appWithTranslation} from 'next-i18next'
 
 class MyApp extends App {
